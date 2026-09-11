@@ -14,7 +14,7 @@
     "test:packed": "node scripts/distribution/packed-install-smoke.mjs",
     "release:rc": "node scripts/release/prepare-rc.mjs",
     "lint": "npm run lint --workspaces --if-present",
-    "typecheck": "npm run build --workspace=@keyset/core && npm run build --workspace=@keyset/sdk && npm run build --workspace=@keyset/adapter-better-auth && npm run build --workspace=@keyset/adapter-authjs && npm run typecheck --workspaces --if-present",
+    "typecheck": "npm run build && npm run typecheck --workspaces --if-present",
     "verify": "npm run lint && npm run typecheck && npm run test && npm run build"
   },
   "engines": {
