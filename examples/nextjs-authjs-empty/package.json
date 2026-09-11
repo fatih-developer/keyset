@@ -1,0 +1,1 @@
+{"name":"keyset-fixture-authjs-empty","private":true,"dependencies":{"next":"^14.0.0","next-auth":"4.24.11"},"scripts":{"dev":"next dev -p 3001"}}

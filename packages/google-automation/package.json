@@ -1,0 +1,20 @@
+{
+  "name": "@keyset/google-automation",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Visible, user-authorized Google Cloud Console automation for Keyset.",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": ["dist", "README.md"],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "npm run build && node --test"
+  },
+  "dependencies": { "@keyset/core": "*", "playwright": "^1.52.0" },
+  "license": "MIT",
+  "homepage": "https://keyset.fatihunal.dev",
+  "repository": { "type": "git", "url": "https://github.com/fatih-developer/keyset.git" },
+  "engines": { "node": ">=20" },
+  "publishConfig": { "access": "public" }
+}

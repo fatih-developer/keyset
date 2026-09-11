@@ -1,0 +1,20 @@
+{
+  "name": "@keyset/sdk",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Public extension contracts and embedding surface for Keyset.",
+  "keywords": ["oauth", "provider-sdk", "keyset"],
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": ["dist"],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "node --test"
+  },
+  "dependencies": { "@keyset/core": "*" },
+  "license": "MIT",
+  "homepage": "https://keyset.fatihunal.dev",
+  "repository": { "type": "git", "url": "https://github.com/fatih-developer/keyset.git" }
+  ,"publishConfig": { "access": "public", "provenance": true }
+}

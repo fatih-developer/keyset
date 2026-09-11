@@ -1,0 +1,37 @@
+name: Release
+
+on:
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: Semantic version tag, for example v1.0.0-rc.1
+        required: true
+        type: string
+
+permissions:
+  contents: read
+
+jobs:
+  release-candidate:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci --ignore-scripts
+      - run: npm run verify
+      - run: node scripts/matrix/run.mjs
+      - run: node scripts/security/secret-sentinel.mjs --scan
+      - run: node --test scripts/security/*.test.mjs
+      - run: npm audit --workspace=@keyset/cli --workspace=@keyset/core --workspace=@keyset/mcp --workspace=@keyset/provider-google --workspace=@keyset/google-automation --workspace=@keyset/sdk --workspace=@keyset/adapter-authjs --workspace=@keyset/adapter-better-auth --omit=dev --audit-level=high --ignore-scripts
+      - run: npm sbom --sbom-format cyclonedx --sbom-type application --omit=dev > keyset-${{ inputs.tag }}.cdx.json
+      - run: node scripts/security/package-audit.mjs
+      - uses: actions/upload-artifact@v4
+        with:
+          name: keyset-${{ inputs.tag }}-release-audit
+          path: keyset-${{ inputs.tag }}.cdx.json
+          if-no-files-found: error

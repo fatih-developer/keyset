@@ -1,0 +1,23 @@
+{
+  "name": "@keyset/cli",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Keyset command-line interface.",
+  "bin": {
+    "keyset": "./dist/index.js"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": ["dist", "README.md"],
+  "engines": { "node": ">=20" },
+  "publishConfig": { "access": "public" },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "npm run build && node --test"
+  },
+  "dependencies": { "@keyset/core": "*", "@keyset/mcp": "*", "@keyset/provider-google": "*", "@keyset/adapter-better-auth": "*", "@keyset/adapter-authjs": "*", "@keyset/google-automation": "*" },
+  "license": "MIT",
+  "homepage": "https://keyset.fatihunal.dev",
+  "repository": { "type": "git", "url": "https://github.com/fatih-developer/keyset.git" }
+}

@@ -1,0 +1,684 @@
+{
+  "generatedAt": "2026-09-11T21:42:36.654Z",
+  "entries": [
+    {
+      "id": "better-auth-next14-app-npm-node20",
+      "framework": "better-auth",
+      "next": "14.2.15",
+      "auth": "1.2.0",
+      "node": "20",
+      "packageManager": "npm",
+      "project": "examples/runtime-nextjs-better-auth",
+      "nextVersion": "14.2.15",
+      "authFramework": "better-auth",
+      "authVersion": "1.2.0",
+      "nodeVersion": "20",
+      "static": true,
+      "semantic": true,
+      "runtime": false,
+      "status": "invalid",
+      "checks": [
+        {
+          "code": "matrix.framework",
+          "ok": true
+        },
+        {
+          "code": "matrix.next",
+          "ok": true
+        },
+        {
+          "code": "matrix.auth",
+          "ok": true
+        },
+        {
+          "code": "matrix.package_manager",
+          "ok": true
+        },
+        {
+          "code": "matrix.router",
+          "ok": true
+        },
+        {
+          "code": "project.detected",
+          "ok": true,
+          "level": "static",
+          "status": "pass"
+        },
+        {
+          "code": "auth.provider_configured",
+          "ok": true,
+          "level": "static",
+          "status": "pass"
+        },
+        {
+          "code": "google.client_id",
+          "ok": true,
+          "level": "static",
+          "status": "pass"
+        },
+        {
+          "code": "google.client_secret",
+          "ok": true,
+          "level": "static",
+          "status": "pass"
+        },
+        {
+          "code": "google.source_configured",
+          "ok": true,
+          "level": "static",
+          "status": "pass"
+        },
+        {
+          "code": "auth.callback_route",
+          "ok": true,
+          "level": "semantic",
+          "status": "pass"
+        },
+        {
+          "code": "auth.route_wiring",
+          "ok": true,
+          "level": "semantic",
+          "status": "pass"
+        },
+        {
+          "code": "google.redirect_uri",
+          "ok": true,
+          "level": "semantic",
+          "status": "pass"
+        },
+        {
+          "code": "runtime.project_boot",
+          "ok": false,
+          "level": "runtime",
+          "status": "fail"
+        }
+      ]
+    },
+    {
+      "id": "better-auth-next14-app-pnpm-node22",
+      "framework": "better-auth",
+      "next": "14.2.15",
+      "auth": "1.2.0",
+      "node": "22",
+      "packageManager": "pnpm",
+      "project": "examples/runtime-nextjs-better-auth-pnpm",
+      "nextVersion": "14.2.15",
+      "authFramework": "better-auth",
+      "authVersion": "1.2.0",
+      "nodeVersion": "22",
+      "static": true,
+      "semantic": true,
+      "runtime": false,
+      "status": "invalid",
+      "checks": [
+        {
+          "code": "matrix.framework",
+          "ok": true
+        },
+        {
+          "code": "matrix.next",
+          "ok": true
+        },
+        {
+          "code": "matrix.auth",
+          "ok": true
+        },
+        {
+          "code": "matrix.package_manager",
+          "ok": true
+        },
+        {
+          "code": "matrix.router",
+          "ok": true
+        },
+        {
+          "code": "project.detected",
+          "ok": true,
+          "level": "static",
+          "status": "pass"
+        },
+        {
+          "code": "auth.provider_configured",
+          "ok": true,
+          "level": "static",
+          "status": "pass"
+        },
+        {
+          "code": "google.client_id",
+          "ok": true,
+          "level": "static",
+          "status": "pass"
+        },
+        {
+          "code": "google.client_secret",
+          "ok": true,
+          "level": "static",
+          "status": "pass"
+        },
+        {
+          "code": "google.source_configured",
+          "ok": true,
+          "level": "static",
+          "status": "pass"
+        },
+        {
+          "code": "auth.callback_route",
+          "ok": true,
+          "level": "semantic",
+          "status": "pass"
+        },
+        {
+          "code": "auth.route_wiring",
+          "ok": true,
+          "level": "semantic",
+          "status": "pass"
+        },
+        {
+          "code": "google.redirect_uri",
+          "ok": true,
+          "level": "semantic",
+          "status": "pass"
+        },
+        {
+          "code": "runtime.project_boot",
+          "ok": false,
+          "level": "runtime",
+          "status": "fail"
+        }
+      ]
+    },
+    {
+      "id": "authjs-next14-app-npm-node20",
+      "framework": "authjs",
+      "next": "14.2.15",
+      "auth": "4.24.11",
+      "node": "20",
+      "packageManager": "npm",
+      "router": "app",
+      "project": "examples/runtime-nextjs-authjs",
+      "nextVersion": "14.2.15",
+      "authFramework": "authjs",
+      "authVersion": "4.24.11",
+      "nodeVersion": "20",
+      "static": true,
+      "semantic": true,
+      "runtime": true,
+      "status": "healthy",
+      "checks": [
+        {
+          "code": "matrix.framework",
+          "ok": true
+        },
+        {
+          "code": "matrix.next",
+          "ok": true
+        },
+        {
+          "code": "matrix.auth",
+          "ok": true
+        },
+        {
+          "code": "matrix.package_manager",
+          "ok": true
+        },
+        {
+          "code": "matrix.router",
+          "ok": true
+        },
+        {
+          "code": "project.detected",
+          "ok": true,
+          "level": "static",
+          "status": "pass"
+        },
+        {
+          "code": "auth.provider_configured",
+          "ok": true,
+          "level": "static",
+          "status": "pass"
+        },
+        {
+          "code": "google.client_id",
+          "ok": true,
+          "level": "static",
+          "status": "pass"
+        },
+        {
+          "code": "google.client_secret",
+          "ok": true,
+          "level": "static",
+          "status": "pass"
+        },
+        {
+          "code": "google.source_configured",
+          "ok": true,
+          "level": "static",
+          "status": "pass"
+        },
+        {
+          "code": "auth.callback_route",
+          "ok": true,
+          "level": "semantic",
+          "status": "pass"
+        },
+        {
+          "code": "auth.route_wiring",
+          "ok": true,
+          "level": "semantic",
+          "status": "pass"
+        },
+        {
+          "code": "google.redirect_uri",
+          "ok": true,
+          "level": "semantic",
+          "status": "pass"
+        },
+        {
+          "code": "runtime.project_boot",
+          "ok": true,
+          "level": "runtime",
+          "status": "pass"
+        },
+        {
+          "code": "runtime.auth_route",
+          "ok": true,
+          "level": "runtime",
+          "status": "pass"
+        },
+        {
+          "code": "runtime.google_config",
+          "ok": true,
+          "level": "runtime",
+          "status": "pass"
+        }
+      ]
+    },
+    {
+      "id": "authjs-next14-pages-npm-node22",
+      "framework": "authjs",
+      "next": "14.2.15",
+      "auth": "4.24.11",
+      "node": "22",
+      "packageManager": "npm",
+      "router": "pages",
+      "project": "examples/runtime-nextjs-authjs-pages",
+      "nextVersion": "14.2.15",
+      "authFramework": "authjs",
+      "authVersion": "4.24.11",
+      "nodeVersion": "22",
+      "static": true,
+      "semantic": true,
+      "runtime": false,
+      "status": "invalid",
+      "checks": [
+        {
+          "code": "matrix.framework",
+          "ok": true
+        },
+        {
+          "code": "matrix.next",
+          "ok": true
+        },
+        {
+          "code": "matrix.auth",
+          "ok": true
+        },
+        {
+          "code": "matrix.package_manager",
+          "ok": true
+        },
+        {
+          "code": "matrix.router",
+          "ok": true
+        },
+        {
+          "code": "project.detected",
+          "ok": true,
+          "level": "static",
+          "status": "pass"
+        },
+        {
+          "code": "auth.provider_configured",
+          "ok": true,
+          "level": "static",
+          "status": "pass"
+        },
+        {
+          "code": "google.client_id",
+          "ok": true,
+          "level": "static",
+          "status": "pass"
+        },
+        {
+          "code": "google.client_secret",
+          "ok": true,
+          "level": "static",
+          "status": "pass"
+        },
+        {
+          "code": "google.source_configured",
+          "ok": true,
+          "level": "static",
+          "status": "pass"
+        },
+        {
+          "code": "auth.callback_route",
+          "ok": true,
+          "level": "semantic",
+          "status": "pass"
+        },
+        {
+          "code": "auth.route_wiring",
+          "ok": true,
+          "level": "semantic",
+          "status": "pass"
+        },
+        {
+          "code": "google.redirect_uri",
+          "ok": true,
+          "level": "semantic",
+          "status": "pass"
+        },
+        {
+          "code": "runtime.project_boot",
+          "ok": false,
+          "level": "runtime",
+          "status": "fail"
+        }
+      ]
+    },
+    {
+      "id": "authjs-next14-app-bun-node22",
+      "framework": "authjs",
+      "next": "14.2.15",
+      "auth": "4.24.11",
+      "node": "22",
+      "packageManager": "bun",
+      "router": "app",
+      "project": "examples/runtime-nextjs-authjs-bun",
+      "nextVersion": "14.2.15",
+      "authFramework": "authjs",
+      "authVersion": "4.24.11",
+      "nodeVersion": "22",
+      "static": true,
+      "semantic": true,
+      "runtime": false,
+      "status": "invalid",
+      "checks": [
+        {
+          "code": "matrix.framework",
+          "ok": true
+        },
+        {
+          "code": "matrix.next",
+          "ok": true
+        },
+        {
+          "code": "matrix.auth",
+          "ok": true
+        },
+        {
+          "code": "matrix.package_manager",
+          "ok": true
+        },
+        {
+          "code": "matrix.router",
+          "ok": true
+        },
+        {
+          "code": "project.detected",
+          "ok": true,
+          "level": "static",
+          "status": "pass"
+        },
+        {
+          "code": "auth.provider_configured",
+          "ok": true,
+          "level": "static",
+          "status": "pass"
+        },
+        {
+          "code": "google.client_id",
+          "ok": true,
+          "level": "static",
+          "status": "pass"
+        },
+        {
+          "code": "google.client_secret",
+          "ok": true,
+          "level": "static",
+          "status": "pass"
+        },
+        {
+          "code": "google.source_configured",
+          "ok": true,
+          "level": "static",
+          "status": "pass"
+        },
+        {
+          "code": "auth.callback_route",
+          "ok": true,
+          "level": "semantic",
+          "status": "pass"
+        },
+        {
+          "code": "auth.route_wiring",
+          "ok": true,
+          "level": "semantic",
+          "status": "pass"
+        },
+        {
+          "code": "google.redirect_uri",
+          "ok": true,
+          "level": "semantic",
+          "status": "pass"
+        },
+        {
+          "code": "runtime.project_boot",
+          "ok": false,
+          "level": "runtime",
+          "status": "fail"
+        }
+      ]
+    },
+    {
+      "id": "better-auth-next14-app-legacy-npm-node22",
+      "framework": "better-auth",
+      "next": "14.2.15",
+      "auth": "1.1.20",
+      "node": "22",
+      "packageManager": "npm",
+      "project": "compatibility/next14-better-auth-legacy",
+      "nextVersion": "14.2.15",
+      "authFramework": "better-auth",
+      "authVersion": "1.1.20",
+      "nodeVersion": "22",
+      "static": true,
+      "semantic": true,
+      "runtime": false,
+      "status": "invalid",
+      "checks": [
+        {
+          "code": "matrix.framework",
+          "ok": true
+        },
+        {
+          "code": "matrix.next",
+          "ok": true
+        },
+        {
+          "code": "matrix.auth",
+          "ok": true
+        },
+        {
+          "code": "matrix.package_manager",
+          "ok": true
+        },
+        {
+          "code": "matrix.router",
+          "ok": true
+        },
+        {
+          "code": "project.detected",
+          "ok": true,
+          "level": "static",
+          "status": "pass"
+        },
+        {
+          "code": "auth.provider_configured",
+          "ok": true,
+          "level": "static",
+          "status": "pass"
+        },
+        {
+          "code": "google.client_id",
+          "ok": true,
+          "level": "static",
+          "status": "pass"
+        },
+        {
+          "code": "google.client_secret",
+          "ok": true,
+          "level": "static",
+          "status": "pass"
+        },
+        {
+          "code": "google.source_configured",
+          "ok": true,
+          "level": "static",
+          "status": "pass"
+        },
+        {
+          "code": "auth.callback_route",
+          "ok": true,
+          "level": "semantic",
+          "status": "pass"
+        },
+        {
+          "code": "auth.route_wiring",
+          "ok": true,
+          "level": "semantic",
+          "status": "pass"
+        },
+        {
+          "code": "google.redirect_uri",
+          "ok": true,
+          "level": "semantic",
+          "status": "pass"
+        },
+        {
+          "code": "runtime.project_boot",
+          "ok": false,
+          "level": "runtime",
+          "status": "fail"
+        }
+      ]
+    },
+    {
+      "id": "authjs-next14-app-legacy-npm-node22",
+      "framework": "authjs",
+      "next": "14.2.15",
+      "auth": "4.24.10",
+      "node": "22",
+      "packageManager": "npm",
+      "router": "app",
+      "project": "compatibility/next14-authjs-legacy",
+      "nextVersion": "14.2.15",
+      "authFramework": "authjs",
+      "authVersion": "4.24.10",
+      "nodeVersion": "22",
+      "static": true,
+      "semantic": true,
+      "runtime": true,
+      "status": "healthy",
+      "checks": [
+        {
+          "code": "matrix.framework",
+          "ok": true
+        },
+        {
+          "code": "matrix.next",
+          "ok": true
+        },
+        {
+          "code": "matrix.auth",
+          "ok": true
+        },
+        {
+          "code": "matrix.package_manager",
+          "ok": true
+        },
+        {
+          "code": "matrix.router",
+          "ok": true
+        },
+        {
+          "code": "project.detected",
+          "ok": true,
+          "level": "static",
+          "status": "pass"
+        },
+        {
+          "code": "auth.provider_configured",
+          "ok": true,
+          "level": "static",
+          "status": "pass"
+        },
+        {
+          "code": "google.client_id",
+          "ok": true,
+          "level": "static",
+          "status": "pass"
+        },
+        {
+          "code": "google.client_secret",
+          "ok": true,
+          "level": "static",
+          "status": "pass"
+        },
+        {
+          "code": "google.source_configured",
+          "ok": true,
+          "level": "static",
+          "status": "pass"
+        },
+        {
+          "code": "auth.callback_route",
+          "ok": true,
+          "level": "semantic",
+          "status": "pass"
+        },
+        {
+          "code": "auth.route_wiring",
+          "ok": true,
+          "level": "semantic",
+          "status": "pass"
+        },
+        {
+          "code": "google.redirect_uri",
+          "ok": true,
+          "level": "semantic",
+          "status": "pass"
+        },
+        {
+          "code": "runtime.project_boot",
+          "ok": true,
+          "level": "runtime",
+          "status": "pass"
+        },
+        {
+          "code": "runtime.auth_route",
+          "ok": true,
+          "level": "runtime",
+          "status": "pass"
+        },
+        {
+          "code": "runtime.google_config",
+          "ok": true,
+          "level": "runtime",
+          "status": "pass"
+        }
+      ]
+    }
+  ]
+}

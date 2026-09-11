@@ -1,0 +1,6 @@
+{
+  "name": "keyset-fixture-nextjs-better-auth",
+  "private": true,
+  "dependencies": { "next": "^14.0.0", "better-auth": "^1.0.0" },
+  "scripts": { "dev": "next dev -p 3000" }
+}

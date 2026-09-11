@@ -1,0 +1,27 @@
+{
+  "name": "keyset-monorepo",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Safe, project-aware OAuth setup and verification for developers and coding agents.",
+  "homepage": "https://keyset.fatihunal.dev",
+  "workspaces": [
+    "packages/*",
+    "examples/*"
+  ],
+  "scripts": {
+    "build": "npm run build --workspace=@keyset/core && npm run build --workspace=@keyset/sdk && npm run build --workspace=@keyset/provider-google && npm run build --workspace=@keyset/adapter-better-auth && npm run build --workspace=@keyset/adapter-authjs && npm run build --workspace=@keyset/google-automation && npm run build --workspace=@keyset/cli && npm run build --workspace=@keyset/mcp",
+    "test": "npm run test --workspaces --if-present",
+    "test:packed": "node scripts/distribution/packed-install-smoke.mjs",
+    "release:rc": "node scripts/release/prepare-rc.mjs",
+    "lint": "npm run lint --workspaces --if-present",
+    "typecheck": "npm run build --workspace=@keyset/core && npm run build --workspace=@keyset/sdk && npm run build --workspace=@keyset/adapter-better-auth && npm run build --workspace=@keyset/adapter-authjs && npm run typecheck --workspaces --if-present",
+    "verify": "npm run lint && npm run typecheck && npm run test && npm run build"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^5.9.0"
+  }
+}
