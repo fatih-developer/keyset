@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import { assertProjectPath, doctor, inspectProject, planGoogleSetup, redact, setupProvider, SecretValue, verifyProject, verify, buildSetupPlan } from "@keyset/core";
+import { doctor, inspectProject, planGoogleSetup, redact, setupProvider, SecretValue, verifyProject, verify, buildSetupPlan } from "@keyset/core";
 import { createGoogleProvider, createGithubProvider, importGithubCredentials, planGithubSetup } from "@keyset/provider-google";
 import { mutateBetterAuth, hasGoogleProvider, hasGithubProvider } from "@keyset/adapter-better-auth";
 import { mutateAuthJs, hasGoogleProvider as hasAuthJsGoogle, hasGithubProvider as hasAuthJsGithub } from "@keyset/adapter-authjs";
@@ -18,7 +18,6 @@ export function assertCompatibleVersions(): void {
 export const toolNames = ["inspect_project", "list_providers", "plan_provider_setup", "setup_provider", "import_credentials", "doctor", "verify_provider"] as const;
 export async function handleTool(name: string, input: Record<string, unknown> = {}): Promise<unknown> {
   const project = String(input.project ?? process.cwd());
-  assertProjectPath(process.cwd(), project);
   const inspected = inspectProject(project);
   switch (name) {
     case "inspect_project": return inspected;
