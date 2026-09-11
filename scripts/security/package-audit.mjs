@@ -9,9 +9,11 @@ const root = resolve(process.cwd());
 const forbidden = /(^|\/)(?:\.env(?:\.|$)|credentials?\.|.*\.(?:pem|key|p12|pfx|log|bak|secret)$|fixtures?|snapshots?)(?:\/|$)/i;
 const bundledNpm = join(dirname(process.execPath), "node_modules", "npm", "bin", "npm-cli.js");
 const npmCli = process.env.npm_execpath || bundledNpm;
-if (!existsSync(npmCli)) throw new Error(`npm CLI not found at ${npmCli}`);
+const npmExecutable = process.platform === "win32" ? process.execPath : "npm";
+const npmPrefix = process.platform === "win32" ? [npmCli] : [];
+if (process.platform === "win32" && !existsSync(npmCli)) throw new Error(`npm CLI not found at ${npmCli}`);
 const run = (cwd, args) => new Promise((ok, fail) => {
-  const child = spawn(process.execPath, [npmCli, ...args], { cwd, shell: false, stdio: ["ignore", "pipe", "pipe"], windowsHide: true });
+  const child = spawn(npmExecutable, [...npmPrefix, ...args], { cwd, shell: false, stdio: ["ignore", "pipe", "pipe"], windowsHide: true });
   let out = "";
   child.stdout.on("data", (b) => { out += b; });
   child.stderr.on("data", (b) => { out += b; });
