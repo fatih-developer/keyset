@@ -4,6 +4,7 @@ import { createGoogleProvider, createGithubProvider, importGithubCredentials, pl
 import { mutateBetterAuth, hasGoogleProvider, hasGithubProvider } from "@keyset/adapter-better-auth";
 import { mutateAuthJs, hasGoogleProvider as hasAuthJsGoogle, hasGithubProvider as hasAuthJsGithub } from "@keyset/adapter-authjs";
 import { createRequire } from "node:module";
+import { realpathSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import { resolve } from "node:path";
 
@@ -37,4 +38,4 @@ export async function startMcpServer(input = process.stdin, output = process.std
   input.setEncoding("utf8");
   for await (const chunk of input) { buffer += chunk; let index; while ((index = buffer.indexOf("\n")) >= 0) { const line = buffer.slice(0, index); buffer = buffer.slice(index + 1); if (!line.trim()) continue; try { const request = JSON.parse(line); Promise.resolve(request.method === "tools/list" ? mcpDescription() : request.method === "server/info" ? serverInfo() : handleTool(request.method, request.params)).then(result => output.write(JSON.stringify({ jsonrpc: "2.0", id: request.id, result: redact(result) }) + "\n")).catch(error => output.write(JSON.stringify({ jsonrpc: "2.0", id: request.id, error: { code: -32602, message: error instanceof Error ? error.message : String(error) } }) + "\n")); } catch (error) { output.write(JSON.stringify({ jsonrpc: "2.0", id: undefined, error: { code: -32602, message: error instanceof Error ? error.message : String(error) } }) + "\n"); } } }
 }
-if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url)) startMcpServer();
+if (process.argv[1] && (() => { try { return realpathSync(resolve(process.argv[1])) === realpathSync(fileURLToPath(import.meta.url)); } catch { return false; } })()) startMcpServer();
