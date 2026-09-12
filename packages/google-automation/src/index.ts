@@ -1,5 +1,5 @@
 import { chromium, type Browser, type Frame, type Page } from "playwright";
-import { SecretValue, callbackUrls, type ProjectInspection } from "@keyset/core";
+import { SecretValue, callbackUrls, type ProjectInspection } from "@key-set/core";
 import { existsSync, mkdtempSync, rmSync } from "node:fs";
 import { spawn, type ChildProcess } from "node:child_process";
 import { tmpdir } from "node:os";

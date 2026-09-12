@@ -9,7 +9,7 @@
     "examples/*"
   ],
   "scripts": {
-    "build": "npm run build --workspace=@keyset/core && npm run build --workspace=@keyset/sdk && npm run build --workspace=@keyset/provider-google && npm run build --workspace=@keyset/adapter-better-auth && npm run build --workspace=@keyset/adapter-authjs && npm run build --workspace=@keyset/google-automation && npm run build --workspace=@keyset/cli && npm run build --workspace=@keyset/mcp",
+    "build": "npm run build --workspace=@key-set/core && npm run build --workspace=@key-set/sdk && npm run build --workspace=@key-set/provider-google && npm run build --workspace=@key-set/adapter-better-auth && npm run build --workspace=@key-set/adapter-authjs && npm run build --workspace=@key-set/google-automation && npm run build --workspace=@key-set/cli && npm run build --workspace=@key-set/mcp",
     "test": "npm run test --workspaces --if-present",
     "test:packed": "node scripts/distribution/packed-install-smoke.mjs",
     "release:rc": "node scripts/release/prepare-rc.mjs",

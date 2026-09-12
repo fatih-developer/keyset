@@ -1,4 +1,4 @@
-import type { Action, Capability, SecretValue, SetupPlan, VerificationResult, ProjectInspection, VerificationCheck } from "@keyset/core";
+import type { Action, Capability, SecretValue, SetupPlan, VerificationResult, ProjectInspection, VerificationCheck } from "@key-set/core";
 
 export type ProviderId = string;
 

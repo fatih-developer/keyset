@@ -1,5 +1,5 @@
 {
-  "name": "@keyset/core",
+  "name": "@key-set/core",
   "version": "1.0.0",
   "type": "module",
   "description": "Project inspection, planning, execution, diagnostics and verification core.",

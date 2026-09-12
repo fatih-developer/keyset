@@ -1,5 +1,5 @@
-import { inspectProject, planGoogleSetup, SecretValue, verify, type ProjectInspection } from "@keyset/core";
-import type { CredentialInput, ProviderPlugin, RedirectPlan } from "@keyset/sdk";
+import { inspectProject, planGoogleSetup, SecretValue, verify, type ProjectInspection } from "@key-set/core";
+import type { CredentialInput, ProviderPlugin, RedirectPlan } from "@key-set/sdk";
 export { createGithubProvider, createGithubProvider as createGitHubProvider, githubRedirectPlan, importGithubCredentials, importGithubCredentials as importGitHubCredentials, planGithubSetup, planGithubSetup as planGitHubSetup, suggestedGithubApplicationName, validateGithubAuthorizationRequest } from "./github.js";
 
 export function importGoogleCredentials(input: unknown): CredentialInput {

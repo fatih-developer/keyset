@@ -1,8 +1,8 @@
 #!/usr/bin/env node
-import { doctor, inspectProject, planGoogleSetup, redact, setupProvider, SecretValue, verifyProject, verify, buildSetupPlan } from "@keyset/core";
-import { createGoogleProvider, createGithubProvider, importGithubCredentials, planGithubSetup } from "@keyset/provider-google";
-import { mutateBetterAuth, hasGoogleProvider, hasGithubProvider } from "@keyset/adapter-better-auth";
-import { mutateAuthJs, hasGoogleProvider as hasAuthJsGoogle, hasGithubProvider as hasAuthJsGithub } from "@keyset/adapter-authjs";
+import { doctor, inspectProject, planGoogleSetup, redact, setupProvider, SecretValue, verifyProject, verify, buildSetupPlan } from "@key-set/core";
+import { createGoogleProvider, createGithubProvider, importGithubCredentials, planGithubSetup } from "@key-set/provider-google";
+import { mutateBetterAuth, hasGoogleProvider, hasGithubProvider } from "@key-set/adapter-better-auth";
+import { mutateAuthJs, hasGoogleProvider as hasAuthJsGoogle, hasGithubProvider as hasAuthJsGithub } from "@key-set/adapter-authjs";
 import { createRequire } from "node:module";
 import { realpathSync } from "node:fs";
 import { fileURLToPath } from "node:url";
@@ -11,9 +11,9 @@ import { resolve } from "node:path";
 const require = createRequire(import.meta.url);
 export const MCP_VERSION = "1.0.0";
 function packageVersion(name: string): string { try { return String(require(`${name}/package.json`).version ?? "unknown"); } catch { return "unknown"; } }
-export function serverInfo() { return { name: "keyset", version: MCP_VERSION, keyset: { cli: packageVersion("@keyset/cli"), mcp: MCP_VERSION, core: packageVersion("@keyset/core") } }; }
+export function serverInfo() { return { name: "keyset", version: MCP_VERSION, keyset: { cli: packageVersion("@key-set/cli"), mcp: MCP_VERSION, core: packageVersion("@key-set/core") } }; }
 export function assertCompatibleVersions(): void {
-  const versions = [MCP_VERSION, packageVersion("@keyset/core"), packageVersion("@keyset/cli")].filter(version => /^\d+\./.test(version));
+  const versions = [MCP_VERSION, packageVersion("@key-set/core"), packageVersion("@key-set/cli")].filter(version => /^\d+\./.test(version));
   if (new Set(versions.map(version => version.split(".")[0])).size > 1) throw new Error(`Incompatible Keyset package versions: ${versions.join(", ")}`);
 }
 export const toolNames = ["inspect_project", "list_providers", "plan_provider_setup", "setup_provider", "import_credentials", "doctor", "verify_provider"] as const;

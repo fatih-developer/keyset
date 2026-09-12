@@ -1,6 +1,6 @@
 # Provider SDK
 
-Provider integrations implement the typed `ProviderPlugin` contract exported by `@keyset/sdk`. A plugin declares metadata and capability honestly, checks prerequisites, creates a `SetupPlan`, imports credentials into `SecretValue` wrappers, and validates the resulting project.
+Provider integrations implement the typed `ProviderPlugin` contract exported by `@key-set/sdk`. A plugin declares metadata and capability honestly, checks prerequisites, creates a `SetupPlan`, imports credentials into `SecretValue` wrappers, and validates the resulting project.
 
 ```ts
 const provider: ProviderPlugin = {

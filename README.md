@@ -57,7 +57,7 @@ git clone https://github.com/fatih-developer/keyset.git
 cd keyset
 npm install
 npm run build
-npm link --workspace=@keyset/cli
+npm link --workspace=@key-set/cli
 keyset --version
 ```
 
@@ -65,20 +65,20 @@ The link exposes both `keyset` and its bundled `keyset mcp` commands. Uninstall
 the global source link later with:
 
 ```bash
-npm unlink --global @keyset/cli
+npm unlink --global @key-set/cli
 ```
 
 ### Install from npm after the registry release
 
-Once `@keyset/cli` is published, the normal installation will be:
+Once `@key-set/cli` is published, the normal installation will be:
 
 ```bash
-npm install --global @keyset/cli
+npm install --global @key-set/cli
 keyset --version
 ```
 
 The npm scope is public, but publishing requires maintainer access to the
-`@keyset` scope. Registry credentials must never be placed in this repository.
+`@key-set` scope. Registry credentials must never be placed in this repository.
 
 ### Prerequisites
 
@@ -266,14 +266,14 @@ privately; never open an issue containing credentials.
 
 | Package | Responsibility |
 | --- | --- |
-| `@keyset/core` | Inspection, plans, transactions, secret-safe env writes, diagnostics, verification |
-| `@keyset/cli` | User-facing `keyset` command and installation helpers |
-| `@keyset/mcp` | Local MCP protocol and typed agent tools |
-| `@keyset/google-automation` | Visible Chrome automation for Google Web client creation |
-| `@keyset/provider-google` | Google and GitHub provider plans and credential validation |
-| `@keyset/adapter-better-auth` | Better Auth detection and source mutation |
-| `@keyset/adapter-authjs` | Auth.js detection and source mutation |
-| `@keyset/sdk` | Provider plugin contracts |
+| `@key-set/core` | Inspection, plans, transactions, secret-safe env writes, diagnostics, verification |
+| `@key-set/cli` | User-facing `keyset` command and installation helpers |
+| `@key-set/mcp` | Local MCP protocol and typed agent tools |
+| `@key-set/google-automation` | Visible Chrome automation for Google Web client creation |
+| `@key-set/provider-google` | Google and GitHub provider plans and credential validation |
+| `@key-set/adapter-better-auth` | Better Auth detection and source mutation |
+| `@key-set/adapter-authjs` | Auth.js detection and source mutation |
+| `@key-set/sdk` | Provider plugin contracts |
 
 Runtime and compatibility fixtures live under `examples/` and `compatibility/`.
 Architecture and operational documentation lives under `docs/`.

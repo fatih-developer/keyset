@@ -3,14 +3,14 @@
 Keyset is distributed as an npm CLI. On a machine with Node.js 20 or newer:
 
 ```bash
-npm install -g @keyset/cli
+npm install -g @key-set/cli
 keyset --version
 ```
 
 The CLI also works without a global install:
 
 ```bash
-npx @keyset/cli --version
+npx @key-set/cli --version
 ```
 
 The packed-release smoke test is `node scripts/distribution/packed-install-smoke.mjs`.

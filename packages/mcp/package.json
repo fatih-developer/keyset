@@ -1,5 +1,5 @@
 {
-  "name": "@keyset/mcp",
+  "name": "@key-set/mcp",
   "version": "1.0.0",
   "type": "module",
   "description": "MCP server exposing Keyset Core capabilities to compatible agents.",
@@ -16,7 +16,7 @@
     "typecheck": "tsc -p tsconfig.json --noEmit",
     "test": "npm run build && node --test"
   },
-  "dependencies": { "@keyset/core": "*", "@keyset/provider-google": "*", "@keyset/adapter-better-auth": "*", "@keyset/adapter-authjs": "*" },
+  "dependencies": { "@key-set/core": "*", "@key-set/provider-google": "*", "@key-set/adapter-better-auth": "*", "@key-set/adapter-authjs": "*" },
   "license": "MIT",
   "homepage": "https://keyset.fatihunal.dev",
   "repository": { "type": "git", "url": "https://github.com/fatih-developer/keyset.git" }

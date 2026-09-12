@@ -1,7 +1,7 @@
 # Keyset Threat Model
 
 Status: v0.7 release-readiness baseline  
-Scope: `@keyset/core`, CLI, SDK, provider and auth adapters, and MCP integration
+Scope: `@key-set/core`, CLI, SDK, provider and auth adapters, and MCP integration
 
 ## Security objective
 

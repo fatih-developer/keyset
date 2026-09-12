@@ -15,7 +15,7 @@ Keyset provides a single reusable workflow through CLI, MCP, and SDK interfaces.
 - Canonical project/docs URL: `https://keyset.fatihunal.dev`
 - CLI: `keyset`
 - MCP server: `keyset-mcp`
-- Package namespace target: `@keyset/*` subject to registry availability before public release
+- Package namespace target: `@key-set/*` subject to registry availability before public release
 - Repository target: `keyset`
 
 The product identity must remain independent from a required commercial root domain. The GitHub repository, package registries, CLI, MCP server, and documentation site must each work independently.

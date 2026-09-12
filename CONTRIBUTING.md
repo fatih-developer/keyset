@@ -7,7 +7,7 @@ Before submitting a change:
 1. Do not introduce secret values into source, fixtures, logs, examples, screenshots, or tests.
 2. Keep provider logic inside provider packages.
 3. Keep auth-library source mutation inside auth-adapter packages.
-4. Keep `@keyset/core` independent from MCP, LLMs, IDEs, agents, and UI automation.
+4. Keep `@key-set/core` independent from MCP, LLMs, IDEs, agents, and UI automation.
 5. Add tests for behavior changes.
 6. Run `npm run verify`.
 

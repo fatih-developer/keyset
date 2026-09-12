@@ -1,5 +1,5 @@
 {
-  "name": "@keyset/adapter-better-auth",
+  "name": "@key-set/adapter-better-auth",
   "version": "1.0.0",
   "type": "module",
   "description": "Better Auth application adapter for Keyset.",
@@ -12,7 +12,7 @@
     "typecheck": "tsc -p tsconfig.json --noEmit",
     "test": "npm run build && node --test"
   },
-  "dependencies": { "@keyset/core": "*" },
+  "dependencies": { "@key-set/core": "*" },
   "license": "MIT",
   "homepage": "https://keyset.fatihunal.dev",
   "repository": { "type": "git", "url": "https://github.com/fatih-developer/keyset.git" }

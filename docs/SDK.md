@@ -1,6 +1,6 @@
 # Provider SDK v1 candidate
 
-Provider packages implement `ProviderPlugin` from `@keyset/sdk`. The stable surface consists of provider identity and capability metadata, prerequisites, deterministic setup planning, credential importing into `SecretValue`, environment requirements, redirect planning, validation hooks, and safe remediation diagnostics.
+Provider packages implement `ProviderPlugin` from `@key-set/sdk`. The stable surface consists of provider identity and capability metadata, prerequisites, deterministic setup planning, credential importing into `SecretValue`, environment requirements, redirect planning, validation hooks, and safe remediation diagnostics.
 
 ```ts
 const provider: ProviderPlugin = {

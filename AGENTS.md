@@ -4,7 +4,7 @@
 
 Keyset is a TypeScript npm-workspace monorepo. Runtime packages live under `packages/`: `core` contains the framework-independent domain, while `cli`, `mcp`, and `sdk` expose it to users and agents. Provider and authentication integrations belong in `provider-google`, `adapter-better-auth`, and `adapter-authjs`. Each package keeps source in `src/` and emits compiled output to `dist/`. Example applications are under `examples/`; agent guidance is under `skills/`; design, architecture, and project planning documents are under `docs/` and `goals/`.
 
-Keep dependencies directed inward toward `@keyset/core`. Provider packages must not edit application source; auth adapters must not provision cloud credentials; CLI and MCP layers must delegate to Core.
+Keep dependencies directed inward toward `@key-set/core`. Provider packages must not edit application source; auth adapters must not provision cloud credentials; CLI and MCP layers must delegate to Core.
 
 ## Build, Test, and Development Commands
 

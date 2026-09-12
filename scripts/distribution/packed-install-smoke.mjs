@@ -25,7 +25,7 @@ for (const name of names) {
 writeFileSync(join(projectDir, "package.json"), `${JSON.stringify({ name: "keyset-packed-smoke", private: true, type: "module", dependencies: tarballs }, null, 2)}\n`);
 execFileSync(npmExecutable, [...npmPrefix, "install", "--ignore-scripts", "--no-audit", "--no-fund", "--silent"], { cwd: projectDir, stdio: "inherit", shell: false });
 const bin = name => process.platform === "win32" ? process.execPath : join(projectDir, "node_modules", ".bin", name);
-const binArgs = name => process.platform === "win32" ? [join(projectDir, "node_modules", "@keyset", name === "keyset" ? "cli" : "mcp", "dist", "index.js")] : [];
+const binArgs = name => process.platform === "win32" ? [join(projectDir, "node_modules", "@key-set", name === "keyset" ? "cli" : "mcp", "dist", "index.js")] : [];
 const run = (name, args, input) => execFileSync(bin(name), [...binArgs(name), ...args], { cwd: projectDir, input, encoding: "utf8", shell: false });
 assert.match(run("keyset", ["--version"]), /Keyset CLI 1\.0\.0/);
 assert.match(run("keyset", ["--help"]), /keyset <command>/);

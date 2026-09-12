@@ -2,7 +2,7 @@ import test from "node:test";
 import assert from "node:assert/strict";
 import { importGoogleCredentials, validateGoogleAuthorizationRequest } from "../dist/index.js";
 import { importGithubCredentials, planGithubSetup, validateGithubAuthorizationRequest } from "../dist/index.js";
-import { inspectProject } from "@keyset/core";
+import { inspectProject } from "@key-set/core";
 
 test("validates Web credentials without returning secrets", () => {
   const result = importGoogleCredentials({ web: { client_id: "1234567890-test.apps.googleusercontent.com", client_secret: "placeholder-secret" } });

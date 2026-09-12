@@ -1,5 +1,5 @@
-import { inspectProject, SecretValue, verify, type ProjectInspection, type SetupPlan } from "@keyset/core";
-import type { CredentialInput, ProviderPlugin, RedirectPlan } from "@keyset/sdk";
+import { inspectProject, SecretValue, verify, type ProjectInspection, type SetupPlan } from "@key-set/core";
+import type { CredentialInput, ProviderPlugin, RedirectPlan } from "@key-set/sdk";
 
 function credentialsObject(input: unknown): Record<string, unknown> {
   let value: unknown;

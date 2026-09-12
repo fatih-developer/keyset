@@ -1,4 +1,4 @@
-# @keyset/adapter-better-auth
+# @key-set/adapter-better-auth
 
 Safe, idempotent Better Auth source mutations for Google and GitHub OAuth.
 

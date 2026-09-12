@@ -1,7 +1,7 @@
 import { existsSync, readFileSync } from "node:fs";
 import { join, relative, resolve } from "node:path";
 import { realpathSync } from "node:fs";
-import { callbackUrls, type ProjectInspection, type SourceMutation } from "@keyset/core";
+import { callbackUrls, type ProjectInspection, type SourceMutation } from "@key-set/core";
 
 export const authJsCallbackPath = "/api/auth/callback/google";
 export const githubCallbackPath = "/api/auth/callback/github";

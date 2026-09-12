@@ -1,5 +1,5 @@
 {
-  "name": "@keyset/provider-google",
+  "name": "@key-set/provider-google",
   "version": "1.0.0",
   "type": "module",
   "description": "Google OAuth provider adapter for Keyset.",
@@ -12,7 +12,7 @@
     "typecheck": "tsc -p tsconfig.json --noEmit",
     "test": "npm run build && node --test"
   },
-  "dependencies": { "@keyset/core": "*", "@keyset/sdk": "*" },
+  "dependencies": { "@key-set/core": "*", "@key-set/sdk": "*" },
   "license": "MIT",
   "homepage": "https://keyset.fatihunal.dev",
   "repository": { "type": "git", "url": "https://github.com/fatih-developer/keyset.git" }

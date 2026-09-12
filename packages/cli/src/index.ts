@@ -3,11 +3,11 @@ import { mkdirSync, writeFileSync, readFileSync, existsSync, realpathSync } from
 import { join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import { spawn } from "node:child_process";
-import { doctor, inspectProject, redact, setupProvider, SecretValue, verifyProject, verify, buildSetupPlan } from "@keyset/core";
-import { createGoogleProvider, importGoogleCredentials, createGithubProvider, importGithubCredentials, planGithubSetup } from "@keyset/provider-google";
-import { mutateBetterAuth, hasGoogleProvider, hasGithubProvider } from "@keyset/adapter-better-auth";
-import { mutateAuthJs, hasGoogleProvider as hasAuthJsGoogle, hasGithubProvider as hasAuthJsGithub } from "@keyset/adapter-authjs";
-import { createGoogleWebCredentials } from "@keyset/google-automation";
+import { doctor, inspectProject, redact, setupProvider, SecretValue, verifyProject, verify, buildSetupPlan } from "@key-set/core";
+import { createGoogleProvider, importGoogleCredentials, createGithubProvider, importGithubCredentials, planGithubSetup } from "@key-set/provider-google";
+import { mutateBetterAuth, hasGoogleProvider, hasGithubProvider } from "@key-set/adapter-better-auth";
+import { mutateAuthJs, hasGoogleProvider as hasAuthJsGoogle, hasGithubProvider as hasAuthJsGithub } from "@key-set/adapter-authjs";
+import { createGoogleWebCredentials } from "@key-set/google-automation";
 import { assertCompatibleVersions, installMcp, installSkill, keysetVersions, MCP_COMMAND } from "./distribution.js";
 
 type Args = { command: string; provider?: string; client?: string; project: string; json: boolean; dryRun: boolean; verbose: boolean; runtime: boolean; auto: boolean; clientId?: string; clientSecret?: string; productionUrl?: string; credentials?: string; configPath?: string; home?: string };

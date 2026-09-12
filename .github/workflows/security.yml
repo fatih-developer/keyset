@@ -27,7 +27,7 @@ jobs:
       - run: npm ci --ignore-scripts
       - run: node scripts/security/secret-sentinel.mjs --scan
       - run: node --test scripts/security/*.test.mjs
-      - run: npm audit --workspace=@keyset/cli --workspace=@keyset/core --workspace=@keyset/mcp --workspace=@keyset/provider-google --workspace=@keyset/google-automation --workspace=@keyset/sdk --workspace=@keyset/adapter-authjs --workspace=@keyset/adapter-better-auth --omit=dev --audit-level=high --ignore-scripts
+      - run: npm audit --workspace=@key-set/cli --workspace=@key-set/core --workspace=@key-set/mcp --workspace=@key-set/provider-google --workspace=@key-set/google-automation --workspace=@key-set/sdk --workspace=@key-set/adapter-authjs --workspace=@key-set/adapter-better-auth --omit=dev --audit-level=high --ignore-scripts
       - run: npm run build
       - run: node scripts/security/package-audit.mjs
 
@@ -56,7 +56,7 @@ jobs:
       - run: npm run build
       - run: node scripts/security/secret-sentinel.mjs --scan
       - run: node --test scripts/security/*.test.mjs
-      - run: npm audit --workspace=@keyset/cli --workspace=@keyset/core --workspace=@keyset/mcp --workspace=@keyset/provider-google --workspace=@keyset/google-automation --workspace=@keyset/sdk --workspace=@keyset/adapter-authjs --workspace=@keyset/adapter-better-auth --omit=dev --audit-level=high --ignore-scripts
+      - run: npm audit --workspace=@key-set/cli --workspace=@key-set/core --workspace=@key-set/mcp --workspace=@key-set/provider-google --workspace=@key-set/google-automation --workspace=@key-set/sdk --workspace=@key-set/adapter-authjs --workspace=@key-set/adapter-better-auth --omit=dev --audit-level=high --ignore-scripts
       - run: node scripts/security/package-audit.mjs
       - name: Generate CycloneDX SBOM
         run: npm sbom --sbom-format cyclonedx --sbom-type application --omit=dev > sbom.cdx.json

@@ -1,4 +1,4 @@
-# @keyset/adapter-authjs
+# @key-set/adapter-authjs
 
 Safe, idempotent Auth.js source mutations for Google and GitHub OAuth.
 

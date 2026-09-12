@@ -15,7 +15,7 @@ function packageVersion(name: string): string {
 }
 
 export function keysetVersions() {
-  return { cli: CLI_VERSION, mcp: packageVersion("@keyset/mcp"), core: packageVersion("@keyset/core") };
+  return { cli: CLI_VERSION, mcp: packageVersion("@key-set/mcp"), core: packageVersion("@key-set/core") };
 }
 
 export function assertCompatibleVersions(versions = keysetVersions()): void {
