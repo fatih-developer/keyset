@@ -1,0 +1,135 @@
+@import "tailwindcss";
+
+/*
+ * Design tokens. Choices from the design board: layered hero (H-C), electric blue accent (R-3),
+ * control surface panels (D-1), caret wordmark (L-2). Backgrounds are flat; the only gradient
+ * is on the hero headline text. Green is semantic ("verified"), never an accent.
+ */
+@theme {
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, "SFMono-Regular", Consolas, monospace;
+
+  --color-ground: #000000;
+  --color-panel: #181818;
+  --color-raise: #1f1f1f;
+  --color-lift: #272727;
+  --color-line: #313131;
+  --color-fg: #ededed;
+  --color-muted: #9b9b9b;
+  --color-faint: #7c7c7c;
+  --color-accent: #5ea2ff;
+  --color-accent-hover: #8abcff;
+  --color-ok: #4ade80;
+  --color-warn: #f5b942;
+
+  --ease-fluid: cubic-bezier(0.32, 0.72, 0, 1);
+}
+
+@layer base {
+  html {
+    background: var(--color-ground);
+    color: var(--color-fg);
+    color-scheme: dark;
+    -webkit-font-smoothing: antialiased;
+  }
+  body {
+    background: var(--color-ground);
+    font-family: var(--font-sans);
+  }
+  h1, h2, h3, h4 { text-wrap: balance; }
+  p, li, dd, summary { text-wrap: pretty; }
+  :focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 4px;
+  }
+  ::selection { background: color-mix(in srgb, var(--color-accent) 35%, transparent); }
+  [id] { scroll-margin-top: 96px; }
+  @media (prefers-reduced-motion: no-preference) {
+    html { scroll-behavior: smooth; }
+  }
+}
+
+@utility text-headline {
+  background: linear-gradient(90deg, #ffffff, #9b9b9b);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@utility eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  line-height: 1rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+}
+
+/* Hero plays a load sequence (it is above the fold, so it never waits on an observer). */
+@keyframes rise {
+  from { opacity: 0; transform: translateY(16px); filter: blur(8px); }
+  to { opacity: 1; transform: none; filter: none; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .rise { animation: rise 900ms var(--ease-fluid) both; }
+}
+
+/* Scroll reveal. Content only hides once JS has marked the document, so it is never lost without JS. */
+@media (prefers-reduced-motion: no-preference) {
+  .js [data-reveal] {
+    opacity: 0;
+    transform: translateY(64px);
+    filter: blur(12px);
+    transition: opacity 900ms var(--ease-fluid), transform 900ms var(--ease-fluid), filter 900ms var(--ease-fluid);
+  }
+  .js [data-reveal].is-in {
+    opacity: 1;
+    transform: none;
+    filter: none;
+  }
+}
+
+/* Tagline: words start muted and resolve one at a time as they cross the trigger line. */
+/* Words are only muted once JS is running, so the sentence stays readable without it. */
+@media (prefers-reduced-motion: no-preference) {
+  .js .tagline-word {
+    color: color-mix(in srgb, var(--color-fg) 30%, transparent);
+    transition: color 700ms var(--ease-fluid);
+  }
+  .js .tagline-word.is-lit { color: var(--color-fg); }
+}
+
+/* Wordmark caret (L-2). */
+@keyframes blink { 50% { opacity: 0; } }
+.caret {
+  display: inline-block;
+  width: 0.55em;
+  height: 0.12em;
+  background: currentColor;
+  transform: translateY(0.34em);
+  margin-left: 0.04em;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .caret-blink { animation: blink 1.2s steps(1) infinite; }
+}
+
+/* Rendered markdown (docs). */
+.prose-docs { color: var(--color-muted); font-size: 1rem; line-height: 1.75rem; }
+.prose-docs > * + * { margin-top: 1rem; }
+.prose-docs h2 { color: var(--color-fg); font-size: 1.5rem; line-height: 2rem; font-weight: 600; margin-top: 3rem; }
+.prose-docs h3 { color: var(--color-fg); font-size: 1.125rem; line-height: 1.75rem; font-weight: 600; margin-top: 2rem; }
+.prose-docs strong { color: var(--color-fg); font-weight: 600; }
+.prose-docs a { color: var(--color-fg); text-decoration: underline; text-decoration-color: var(--color-accent); text-underline-offset: 4px; }
+.prose-docs a:hover { color: var(--color-accent); }
+.prose-docs ul { list-style: disc; padding-left: 1.5rem; }
+.prose-docs ol { list-style: decimal; padding-left: 1.5rem; }
+.prose-docs li + li { margin-top: 0.5rem; }
+.prose-docs li::marker { color: var(--color-faint); }
+.prose-docs :not(pre) > code { font-family: var(--font-mono); font-size: 0.875rem; color: var(--color-fg); background: var(--color-raise); border: 1px solid var(--color-line); border-radius: 0.375rem; padding: 0.0625rem 0.375rem; }
+.prose-docs pre { font-family: var(--font-mono); font-size: 0.875rem; line-height: 1.25rem; background: var(--color-raise) !important; border: 1px solid var(--color-line); border-radius: 0.75rem; padding: 1rem; overflow-x: auto; }
+.prose-docs .table-wrap { overflow-x: auto; border: 1px solid var(--color-line); border-radius: 0.75rem; }
+.prose-docs table { width: 100%; border-collapse: collapse; font-size: 0.875rem; line-height: 1.25rem; }
+.prose-docs th { color: var(--color-fg); font-weight: 600; text-align: left; background: var(--color-panel); }
+.prose-docs th, .prose-docs td { padding: 0.75rem 1rem; border-bottom: 1px solid var(--color-line); vertical-align: top; }
+.prose-docs tr:last-child td { border-bottom: 0; }
+.prose-docs blockquote { border: 1px solid var(--color-line); border-radius: 0.75rem; padding: 1rem; background: var(--color-panel); }
