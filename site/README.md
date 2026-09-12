@@ -47,9 +47,8 @@ The source brief is `docs/LANDING-PAGE-BRIEF.md`. The main constraints:
 - Never show a real client ID, secret, email address, or personal path.
 - Products that are in development have no link and no command, and are always
   labeled as in development.
-- Keep install instructions "from source" until `@key-set/cli` is published on
-  npm. Then update `lib/commands.ts`, the hero helper text, and the CLI install
-  note.
+- Keep the published `npm install -g @key-set/cli` command as the primary install
+  path. Keep source linking only under the contributor guidance.
 
 ## When the next Onset product ships
 

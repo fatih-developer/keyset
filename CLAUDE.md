@@ -71,5 +71,5 @@ When you add a workspace package, also add it to the ordered `build` script in t
 - **Onset** is the umbrella brand; Keyset is its first product. The name exists only on the site: the code, the `@key-set/*` scope, and the `keyset` CLI are unchanged.
 - Products other than Keyset are "in development". They never get links or commands on the site (`site/content/products.ts`).
 - The site renders `docs/*.md` at build time, but only the files in the allowlist in `site/lib/docs.ts`. When you add a user-facing doc, add it to the allowlist. Internal docs (PRD, landing brief, release notes) must stay unpublished.
-- Commands shown on the site live in `site/lib/commands.ts` and must match the real CLI. Two examples: the MCP entry is `keyset-mcp` with `args: []`, and installation is from source until `@key-set/cli` is published.
+- Commands shown on the site live in `site/lib/commands.ts` and must match the real CLI. Two examples: the MCP entry is `keyset-mcp` with `args: []`, and the primary CLI installation is `npm install -g @key-set/cli`; source linking is for contributors.
 - All copy lives in `site/content/i18n/{en,tr}.ts`. The Turkish dictionary is type checked against the English one.

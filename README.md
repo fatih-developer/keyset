@@ -47,10 +47,25 @@ known limits.
 
 ## Installation
 
-### Install from this repository
+### Install from npm
 
-The packages have not yet been published to the npm registry. Until the first
-registry release, install and link the CLI from source:
+The published CLI is available from the npm registry:
+
+```bash
+npm install -g @key-set/cli
+keyset --version
+```
+
+You can also run it without a global install:
+
+```bash
+npx @key-set/cli --version
+```
+
+### Contributing and building from source
+
+When contributing to Keyset or testing unreleased changes, install and link the
+CLI from the repository:
 
 ```bash
 git clone https://github.com/fatih-developer/keyset.git
@@ -66,15 +81,6 @@ the global source link later with:
 
 ```bash
 npm unlink --global @key-set/cli
-```
-
-### Install from npm after the registry release
-
-Once `@key-set/cli` is published, the normal installation will be:
-
-```bash
-npm install --global @key-set/cli
-keyset --version
 ```
 
 The npm scope is public, but publishing requires maintainer access to the
@@ -308,7 +314,7 @@ temporary project and exercises the distributed CLI and MCP entry points.
 - Frameworks other than Better Auth and Auth.js are not currently supported.
 - Production runtime verification is not a substitute for a complete real-user
   sign-in test.
-- npm registry packages are prepared but not published yet.
+- the published npm package is currently the recommended CLI installation path.
 
 ## Documentation
 
