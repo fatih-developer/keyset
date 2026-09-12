@@ -145,8 +145,10 @@ export const tr = {
       body: "Doğrudan geliştirici arayüzü. npm paket scope'u ne olursa olsun komutun adı her zaman `keyset`.",
       packageLabel: "Paket",
       commandLabel: "Komut",
-      installTitle: "Kaynaktan kurulum",
-      installNote: "`@key-set/cli` paketi npm için hazır ama henüz yayınlanmadı. O zamana kadar CLI'yı repodan bağlayın.",
+      installTitle: "npm ile kurun",
+      installNote: "Yayınlanan CLI paketini global olarak kurun, ardından `keyset --help` veya proje incelemesini çalıştırın.",
+      sourceTitle: "Katkı ve kaynak koddan derleme",
+      sourceNote: "Keyset'e katkı yapmak veya yayınlanmamış değişiklikleri denemek istediğinizde repoyu klonlayın.",
     },
     mcp: {
       title: "Yerel MCP sunucusu",
@@ -247,7 +249,7 @@ export const tr = {
     body: "Proje incelemesiyle başlayın, planı önizleyin ve kullanıcılarınız bir yapılandırma hatasıyla karşılaşmadan yönlendirmeyi doğrulayın.",
     cta: "Keyset'i kur",
     secondary: "Kurulum rehberini oku",
-    commandsLabel: "Kaynaktan kurun, ardından uygulamanızı inceleyin",
+    commandsLabel: "Keyset'i kurun, ardından uygulamanızı inceleyin",
   },
   footer: {
     tagline: "Keyset, OAuth kurulumu ve doğrulaması için açık kaynak bir Onset ürünü.",

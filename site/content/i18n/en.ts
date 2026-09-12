@@ -145,8 +145,10 @@ export const en: Dictionary = {
       body: "The direct developer interface. The command is always `keyset`, whatever the npm package scope.",
       packageLabel: "Package",
       commandLabel: "Command",
-      installTitle: "Install from source",
-      installNote: "The `@key-set/cli` package is prepared for npm but not published yet. Until then, link the CLI from the repository.",
+      installTitle: "Install from npm",
+      installNote: "Install the published CLI globally, then run `keyset --help` or inspect your project.",
+      sourceTitle: "Contributing and building from source",
+      sourceNote: "Clone the repository when you want to contribute to Keyset or test unreleased changes.",
     },
     mcp: {
       title: "Local MCP server",
@@ -247,7 +249,7 @@ export const en: Dictionary = {
     body: "Start with a project inspection, preview the plan, and verify the redirect before your users meet a configuration error.",
     cta: "Install Keyset",
     secondary: "Read the installation guide",
-    commandsLabel: "Install from source, then inspect your app",
+    commandsLabel: "Install Keyset, then inspect your app",
   },
   footer: {
     tagline: "Keyset is an open source Onset product for OAuth setup and verification.",

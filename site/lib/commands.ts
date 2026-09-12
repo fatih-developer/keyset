@@ -2,7 +2,8 @@ import { REPO_URL } from "./site";
 
 // Commands shown on the site. They must match the real CLI (packages/cli/src/index.ts) and README.
 
-/** npm release of @key-set/cli is pending, so installation is from source. */
+export const INSTALL_FROM_NPM = "npm install -g @key-set/cli";
+
 export const INSTALL_FROM_SOURCE = [
   `git clone ${REPO_URL}.git`,
   "cd keyset",
@@ -13,7 +14,7 @@ export const INSTALL_FROM_SOURCE = [
 ].join("\n");
 
 export const FIRST_RUN = [
-  ...INSTALL_FROM_SOURCE.split("\n").slice(0, 5),
+  INSTALL_FROM_NPM,
   "# then, inside your Next.js app",
   "keyset inspect",
 ].join("\n");

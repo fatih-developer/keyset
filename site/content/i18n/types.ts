@@ -73,7 +73,7 @@ export interface Dictionary {
     eyebrow: string;
     title: string;
     intro: string;
-    cli: { title: string; body: string; packageLabel: string; commandLabel: string; installTitle: string; installNote: string };
+    cli: { title: string; body: string; packageLabel: string; commandLabel: string; installTitle: string; installNote: string; sourceTitle: string; sourceNote: string };
     mcp: { title: string; body: string; installTitle: string; configTitle: string; flowTitle: string; mutatingLabel: string; note: string };
     agent: { title: string; body: string };
   };

@@ -1,7 +1,7 @@
 import type { Dictionary } from "@/content/i18n/types";
 import { Section } from "@/components/ui/Section";
 import { CodeBlock } from "@/components/ui/CodeBlock";
-import { INSTALL_FROM_SOURCE, MCP_CONFIG, MCP_INSTALL, MCP_TOOLS } from "@/lib/commands";
+import { INSTALL_FROM_NPM, INSTALL_FROM_SOURCE, MCP_CONFIG, MCP_INSTALL, MCP_TOOLS } from "@/lib/commands";
 import { inline } from "@/lib/inline";
 
 export function CliMcp({ dict }: { dict: Dictionary }) {
@@ -29,6 +29,11 @@ export function CliMcp({ dict }: { dict: Dictionary }) {
           <div className="flex flex-col gap-3">
             <h4 className="text-base font-semibold text-fg">{cliMcp.cli.installTitle}</h4>
             <p className="text-sm text-muted">{inline(cliMcp.cli.installNote)}</p>
+            <CodeBlock title="terminal" code={INSTALL_FROM_NPM} {...copy} />
+          </div>
+          <div className="flex flex-col gap-3">
+            <h4 className="text-base font-semibold text-fg">{cliMcp.cli.sourceTitle}</h4>
+            <p className="text-sm text-muted">{inline(cliMcp.cli.sourceNote)}</p>
             <CodeBlock title="terminal" code={INSTALL_FROM_SOURCE} {...copy} />
           </div>
         </article>
